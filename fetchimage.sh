@@ -6,7 +6,7 @@ wget -o Img.bin.zip "${linkdl}"
 
 # Process Files
 fnamet=$(zipinfo -1 Img.bin.zip)
-jar -xvf Img.zip
+jar -xvf Img.bin.zip
 mv $fnamet $2
 rm Img.zip
 
