@@ -5,8 +5,10 @@ echo "Downloading From $linkdl"
 wget -o Img.bin.zip "${linkdl}"
 
 # Process Files
-gunzip -S Img.bin.zip .
-mv *.bin $2
+gunzip -S Img.bin.zip
+ls
+for f in *; do mv "$f.bin" "Image.bin"; done
+mv Image.bin $2
 rm Img.bin.zip
 
 

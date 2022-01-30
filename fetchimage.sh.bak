@@ -6,7 +6,8 @@ wget -o Img.bin.zip "${linkdl}"
 
 # Process Files
 gunzip -S Img.bin.zip
-mv *.bin $2
+ls
+for f in *; do mv "$f.bin" "Image.bin"; done
 rm Img.bin.zip
 
 
