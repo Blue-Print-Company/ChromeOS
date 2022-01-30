@@ -5,7 +5,7 @@ echo "Downloading From $linkdl"
 wget -o Img.zip "${linkdl}"
 
 # Process Files
-fnamet=${zipinfo -1 Img.zip)
+fnamet=$(zipinfo -1 Img.zip)
 unzip Img.zip
 mv $fnamet $2
 rm Img.zip

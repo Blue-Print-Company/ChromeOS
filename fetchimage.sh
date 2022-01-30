@@ -2,10 +2,10 @@
 echo "Fetching Image Link..."
 linkdl=$(curl -v --stderr - https://cros-updates-serving.appspot.com/ | grep -o 'https[^"]*'"$1"'[^"]*zip' | tail -1)
 echo "Downloading From $linkdl"
-wget -o Img.zip "${linkdl}"
+wget -o Img.bin.zip "${linkdl}"
 
 # Process Files
-fnamet=$(zipinfo -1 Img.zip)
+fnamet=$(zipinfo -1 Img.bin.zip)
 unzip Img.zip
 mv $fnamet $2
 rm Img.zip
