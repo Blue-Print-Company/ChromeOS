@@ -1,0 +1,23 @@
+on:
+  push:
+  schedule:
+    - cron: '0 8 * * 6'
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps: 
+    - uses: actions/checkout@v2
+    - name: Building
+      shell: bash
+      run: |
+        echo Build
+        bash Main.sh volteer ChromeOS.img
+    - name: Upload
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: ChromeOS.img
+        tag: "Stable"
+        release_name: "Auto Build (Volteer)"
+        overwrite: true
+        body: "Automatic Image Build"
