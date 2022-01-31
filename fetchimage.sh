@@ -5,6 +5,9 @@ echo "Downloading From $linkdl"
 wget -o Img.bin.zip "${linkdl}"
 
 # Process Files
+#tes
+echo HereEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+file Img.bin.zip
 7z x Img.bin.zip
 ls
 mv *".bin" $2
