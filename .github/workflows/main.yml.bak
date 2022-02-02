@@ -2,6 +2,7 @@ on:
   push:
   schedule:
     - cron: '0 8 * * 6'
+    
 jobs:
   Build:
     runs-on: ubuntu-latest
@@ -12,16 +13,3 @@ jobs:
       run: |
         echo Build
         bash Main.sh volteer ChromeOS.img
-     - name: Clean
-       uses: dev-drprasad/delete-tag-and-release@v0.2.0
-       with:
-         delete_release: true
-         tag_name: Stable
-       env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-     - name: Release
-       uses: actions/checkout@v2
-       uses: ncipollo/release-action@v1
-     with:
-       body: ${{ env.outf }}
-       token: ${{ secrets.GITHUB_TOKEN }}
