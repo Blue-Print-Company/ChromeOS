@@ -27,6 +27,5 @@ jobs:
     - uses: actions/checkout@v2
     - uses: ncipollo/release-action@v1
     with:
-      artifacts: "release.tar.gz,foo/*.txt"
-      bodyFile: "body.md"
+      body: ${{ env.outf }}
       token: ${{ secrets.GITHUB_TOKEN }}
