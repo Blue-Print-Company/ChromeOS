@@ -5,9 +5,6 @@ echo "Downloading From $linkdl"
 curl -L ${linkdl} -o Img.bin.zip
 
 # Process Files
-#test
-echo HereEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-file Img.bin.zip
 7z x Img.bin.zip
 ls
 mv *".bin" $2

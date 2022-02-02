@@ -6,7 +6,9 @@ rm *.tar.gz
 rm Recovery.bin
 rm -rf ./Brunch
 mkdir Brunch
-sudo apt update && sudo apt -y install -qq pv cgpt tar unzip wget curl grep fastjar gunzip p7zip-full
+echo Install Dept.
+sudo apt update && sudo apt -y install -qq pv cgpt tar unzip
+sudo apt update && sudo apt -y install -qq wget curl grep p7zip-full
 
 # Start
 bash fetchimage.sh $1 Image.bin
