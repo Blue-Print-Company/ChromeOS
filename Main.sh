@@ -9,11 +9,13 @@ mkdir Brunch
 echo Install Dept.
 sudo apt update && sudo apt -y install -qq pv cgpt tar unzip
 sudo apt update && sudo apt -y install -qq wget curl grep p7zip-full
+clear
 
 # Start
 bash fetchimage.sh $1 Image.bin
 bash getbrunch.sh Brunch
 bash build.sh Image.bin $2
+bash uploader.sh $2 $2
 
 # Usage
 # Main <Version> <Output>
