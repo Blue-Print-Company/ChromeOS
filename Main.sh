@@ -15,7 +15,8 @@ clear
 bash fetchimage.sh $1 Image.bin
 bash getbrunch.sh Brunch
 bash build.sh Image.bin $2
-bash uploader.sh $2 $2
+outf=$(curl --upload-file $2 https://transfer.sh/$2)
+echo $outf
 
 # Usage
 # Main <Version> <Output>
