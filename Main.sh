@@ -16,7 +16,12 @@ bash fetchimage.sh $1 Image.bin
 bash getbrunch.sh Brunch
 bash build.sh Image.bin $2
 outf=$(curl --upload-file $2 https://transfer.sh/$2)
+echo Output File: $outf
 echo $outf
 
+if ["$GITHUB_ACTIONS"=true]
+then
+   echo "outlk=$(echo $outf)" >> $GITHUB_ENV
+fi
 # Usage
 # Main <Version> <Output>
