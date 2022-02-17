@@ -5,9 +5,11 @@ echo "Downloading From $linkdl"
 curl -L ${linkdl} -o Img.bin.zip
 
 # Process Files
+echo Unzipping...
 7z x Img.bin.zip
-ls
+echo Renaming...
 mv *".bin" $2
+echo Cleaning Up...
 rm Img.bin.zip
 
 
