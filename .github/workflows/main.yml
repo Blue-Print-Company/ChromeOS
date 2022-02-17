@@ -13,6 +13,13 @@ jobs:
       run: |
         echo Build
         bash Main.sh volteer ChromeOS.img
+  Clean:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: dev-drprasad/delete-tag-and-release@v0.2.0
+      with:
+        delete_release: true
+        tag_name: Stable
   Upload:
     runs-on: ubuntu-latest
     needs: ["Build"]
@@ -24,5 +31,5 @@ jobs:
       with:
         allowUpdates: true
         tag: "Stable"
-        body: ${{ env.outlk }}
+        body: ${{ env.UPLOADURL }}
         token: ${{ secrets.GITHUB_TOKEN }}
