@@ -22,9 +22,9 @@ outf=$(curl -s --upload-file $2 https://transfer.sh/$2)
 echo Output File: $outf
 echo $outf
 
-if $GITHUB_ACTIONS || true
+if [ $GITHUB_ACTIONS ]
 then
-   echo "outlk=$(echo $outf)" >> $GITHUB_ENV
+   echo "UPLOADURL="'$outf' >> $GITHUB_ENV
 fi
 # Usage
 # Main <Version> <Output>
