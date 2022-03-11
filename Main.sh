@@ -6,10 +6,9 @@ rm *.tar.gz
 rm Recovery.bin
 rm -rf ./Brunch
 mkdir Brunch
-echo Install Dept.
-sudo apt update && sudo apt -y install -qq pv cgpt tar unzip
-sudo apt update && sudo apt -y install -qq wget curl grep p7zip-full
-clear
+echo Installing Dept.
+sudo apt update && sudo apt -y install -qq pv cgpt tar unzip lrzip wget curl grep p7zip-full
+echo Done
 
 # Start
 echo "Fetching Image Link..."
