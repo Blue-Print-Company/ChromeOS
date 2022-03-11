@@ -1,8 +1,5 @@
 # Main Script
 
-# Path
-cd
-
 # Init
 rm *.zip
 rm *.tar.gz
