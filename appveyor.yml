@@ -3,5 +3,5 @@ image: Ubuntu
 build_script:
 - sh: bash Main.sh volteer IMG.img
 artifacts:
-- path: "**\*.img"
+- path: '**\*.img'
   name: Image
