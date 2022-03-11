@@ -1,7 +1,8 @@
 version: 1.0.{build}
 image: Ubuntu
 build_script:
-- sh: bash Main.sh volteer IMG.img
+- sh: bash Main.sh volteer Image.img
+- sh: lrzip -z -v Image.img -o Image.lzr
 artifacts:
-- path: '**\*.img'
+- path: '**\*.lzr'
   name: Image
