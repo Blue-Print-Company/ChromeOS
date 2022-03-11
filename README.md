@@ -1,7 +1,7 @@
 
 # ChromeOS with Brunch
 ### Status: 
-[![.github/workflows/main.yml](https://github.com/OctonalXX/ChromeOS/actions/workflows/main.yml/badge.svg)](https://github.com/OctonalXX/ChromeOS/actions/workflows/main.yml)
+[![Build status](https://ci.appveyor.com/api/projects/status/kliqq859xvjne20e?svg=true)](https://ci.appveyor.com/project/OctonalXX/chromeos)
 ##### ChromeOS automated builds
 #### This Repo is for auto builds with brunch
 #### WIP
