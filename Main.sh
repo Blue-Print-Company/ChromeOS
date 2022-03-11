@@ -1,7 +1,7 @@
 # Main Script
 
 # Path
-echo $PATH
+cd
 
 # Init
 rm *.zip
