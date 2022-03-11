@@ -1,4 +1,4 @@
 version: 1.0.{build}
 image: Ubuntu
 build_script:
-- sh: bash Main.sh Volteer IMG.img
+- sh: bash Main.sh volteer IMG.img
