@@ -4,3 +4,4 @@ build_script:
 - sh: bash Main.sh volteer IMG.img
 artifacts:
 - path: **\*.img
+  name: Image
