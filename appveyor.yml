@@ -2,7 +2,10 @@ version: 1.0.{build}
 image: Ubuntu
 build_script:
 - sh: bash Main.sh volteer Image.img
-- sh: lrzip -z -v Image.img -o Image.lzr
-artifacts:
-- path: '**\*.lzr'
-  name: Image
+- sh: url = $(curl --upload-file ./Image.img https://transfer.sh/Image.img)
+deploy:
+- provider: GitHub
+  release: Latest Image
+  description: $url
+  auth_token:
+    secure: tTiGSxHfgh3jf7jF8ku5ZHf8SvlFxJFjHxWDOhCrJEfOBLpNNMAz1hfbhQofD+T5
