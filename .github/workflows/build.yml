@@ -11,7 +11,7 @@ jobs:
       - name: Building
         shell: bash
         run: |
-          Main.sh volteer Image.img
+          ./Main.sh volteer Image.img
           tsshlink=$(curl --upload-file ./Image.img https://transfer.sh/ChromeOS.img)
           echo "REL_LINK=$tsshlink" >> $GITHUB_ENV
       - name: Cleaning
