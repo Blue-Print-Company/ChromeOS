@@ -1,5 +1,5 @@
 # Get Recovery Image
-linkdl=$(curl -v --stderr - https://cros-updates-serving.appspot.com/ | grep -o 'https[^"]*'"$1"'[^"]*zip' | tail -1)
+linkdl=$(curl -v --stderr - 'https://chromiumdash.appspot.com/serving-builds?deviceCategory=ChromeOS' | grep -o 'https[^"]*'"$1"'[^"]*zip' | tail -1)
 echo "Downloading From $linkdl"
 curl -L -s ${linkdl} -o Img.bin.zip
 
