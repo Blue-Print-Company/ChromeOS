@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Building
-        shell: bash
+        shell: sh
         run: |
           ./Main.sh volteer Image.img
           tsshlink=$(curl --upload-file ./Image.img https://transfer.sh/ChromeOS.img)
