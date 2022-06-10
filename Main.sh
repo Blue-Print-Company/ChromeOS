@@ -1,13 +1,13 @@
 # Main Script
 
 # Init
+echo Installing Dept.
+sudo apt update && sudo apt -y install -qq pv cgpt tar unzip lrzip wget curl grep p7zip-full
 rm *.zip
 rm *.tar.gz
 rm Recovery.bin
 rm -rf ./Brunch
 mkdir Brunch
-echo Installing Dept.
-sudo apt update && sudo apt -y install -qq pv cgpt tar unzip lrzip wget curl grep p7zip-full
 echo Done
 
 # Start
