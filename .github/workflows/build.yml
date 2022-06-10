@@ -11,8 +11,7 @@ jobs:
       - name: Building
         shell: bash
         run: |
-          git update-index --chmod=+x ./Main.sh
-          ./Main.sh volteer Image.img
+          sudo Main.sh volteer Image.img
           tsshlink=$(curl --upload-file ./Image.img https://transfer.sh/ChromeOS.img)
           echo "REL_LINK=$tsshlink" >> $GITHUB_ENV
       - name: Cleaning
